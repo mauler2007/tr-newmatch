@@ -1,0 +1,196 @@
+.top {
+
+  // min-height: 100vh;
+  // margin-bottom: 3vw;
+  position: relative;
+  z-index: 2;
+  background: -webkit-image-set(url(../images/bg/setka.avif) 1x, url(../images/bg/setka.webp) 2x, url(../images/bg/setka.png) 2x);
+  background: -webkit-image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+  background: -webkit-image-set(url(../images/bg/setka.avif) 1x type("image/avif"), url(../images/bg/setka.webp) 2x type("image/webp"), url(../images/bg/setka.png) 2x type("image/png"));
+  background: image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+  // background: url('../images/bg/setka.png');
+
+  background-repeat: no-repeat;
+  background-position: right 50%;
+  background-size: 35%;
+
+  @include mq(xs) {
+    background-position: right 40%;
+  }
+
+  @include mq(sm) {
+    background-size: 25%;
+  }
+
+  @include mq(lg) {
+    background: none;
+  }
+
+  &--safari {
+
+    background-repeat: url('../images/bg/setka.png');
+    background-repeat: no-repeat;
+
+    @include mq(lg) {
+      background: none;
+    }
+  }
+
+  &--hideForm {
+    // display: block;
+    flex-direction: column;
+    justify-content: center;
+
+    background-position: right 100%;
+
+    .top {
+      &__inner {
+        flex-direction: column;
+      }
+    }
+
+    // .top__geoContent {
+    //   display: none;
+    // } 
+    .promo {
+      max-width: 800px;
+      margin: 0 auto;
+
+      &__item {
+        padding: 10px 0px 0px;
+
+        @include mq(lg) {
+          display: flex;
+          // align-items: center;
+          // flex-direction: row-reverse;
+          flex-direction: column;
+        }
+      }
+
+      &__picture {
+        margin: 0 auto;
+        width: 70vw;
+        // height: 10%;
+
+        @include mq(xs) {
+          width: 45vw;
+          // width: 57vw;
+        }
+
+        @include mq(lg) {
+          // width: 75%;
+          width: 55%;
+        }
+      }
+
+      // &__picture {
+      //   width: 80%;
+
+      //   @include mq(xs) {
+      //     display: block;
+      //     width: 55%;
+      //     max-width: 450px;
+      //   }
+
+      //   @include mq(lg) {
+      //     max-width: 450px;
+      //     width: 65%;
+      //   }
+      // }
+    }
+
+    .title {
+
+      &:nth-child(1) {
+        display: block;
+
+        @include mq(xs) {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+
+      &__text {
+        width: 100%;
+      }
+    }
+  }
+
+
+  &__inner {
+    position: relative;
+    display: block;
+
+    @include mq(lg) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+
+    &>.title {
+      display: block;
+      text-align: center;
+
+      @include mq(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__geoContent {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &>.title {
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
+    }
+
+    & .title__text {
+
+      @include mq(lg) {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+
+      span {
+        padding-left: 3px;
+        line-height: 1;
+
+        // @include mq(lg) {
+        //   font-size: inherit;
+        // }
+
+        @include mq(lg) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 100%;
+  }
+
+  &__promo {
+    margin-bottom: 45px;
+
+    @include mq(lg) {
+      min-width: 650px;
+      margin-bottom: 0;
+
+    }
+  }
+}

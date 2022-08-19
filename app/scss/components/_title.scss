@@ -1,0 +1,83 @@
+.title {
+  margin-bottom: 0.5em;
+
+  &__text,
+  &__num {
+    text-transform: uppercase;
+    font-style: italic;
+
+    animation: cinematicInOut 1s ease-in 2s;
+    animation-delay: 0s;
+  }
+
+  &__text {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @extend %mont-700;
+    @include adaptiv-font(60, 24);
+    line-height: 1.12;
+
+    @include mq(xs) {
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    @include mq(sm) {
+      line-height: 1.24;
+    }
+
+    @include mq(md) {
+      width: 70%;
+    }
+
+    @include mq(fhd) {
+      font-size: 58px;
+    }
+
+    // span {
+    //   @include mq(fhd) {
+    //     font-size: 58px;
+    //   }
+    // }
+  }
+
+  &__num {
+    padding: 0 6px;
+    @extend %mont-900;
+    @include adaptiv-font(88, 36);
+    font-weight: 900;
+
+    @include mq(lg) {
+      padding: 0 6px 0 0;
+    }
+  }
+
+  @keyframes cinematicInOut {
+    0% {
+      text-shadow: 0 0 1em white;
+      opacity: 0;
+      // margin-left: -.5em;
+    }
+
+    100% {
+      text-shadow: 0 0 0 white;
+      opacity: 1;
+      // margin-left: 0;
+    }
+
+    // 75% {
+    //   text-shadow: 0 0 0 white;
+    //   opacity: 1;
+    //   margin-left: 0;
+    // }
+
+    // 100% {
+    //   text-shadow: 0 0 1em white;
+    //   opacity: 0;
+    //   margin-left: 0;
+    // }
+  }
+}

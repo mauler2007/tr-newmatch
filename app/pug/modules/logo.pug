@@ -1,0 +1,13 @@
+block variables
+  - var logoText = 'best bets for you'
+
+.logo 
+  a.logo__link(href="https://betandyou.com")
+    svg.logo__svg
+      use(xlink:href="images/sprite.svg#icon-logo")
+    //- picture
+    //-   source(srcset='images/logo-mobile.png',media='(max-width: 576px)')
+    //-   source(srcset='images/logo.png',media='(max-width: 992px)')
+    //-   img(src='images/logo.png' alt='logo')
+    .logo__slogan 
+      .logo__text=logoText

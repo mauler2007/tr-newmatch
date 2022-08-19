@@ -1,0 +1,37 @@
+.fog {
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    filter: blr(3px);
+    animation: anim calc(7s*var(--strok)) linear infinite;
+  }
+
+
+  @keyframes anim {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+
+    20% {
+      opacity: .1;
+    }
+
+    50% {
+      opacity: .0;
+    }
+
+    80% {
+      opacity: .1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+}

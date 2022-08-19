@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="images/favicon/icon.ico">
+    <link rel="mask-icon" href="images/favicon/icon.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1e0b0b">
+    <title>Newmatch</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <div class="fog">  
+        <picture>
+          <source srcset="./images/fog/fog1.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog1.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog1.png" alt="fog" style="--strok:1;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog2.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog2.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog2.png" alt="fog" style="--strok:2;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog3.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog3.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog3.png" alt="fog" style="--strok:3;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog4.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog4.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog4.png" alt="fog" style="--strok:4;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog2.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog2.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog2.png" alt="fog" style="--strok:5;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog3.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog3.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog3.png" alt="fog" style="--strok:6;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog3.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog3.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog3.png" alt="fog" style="--strok:7;">
+        </picture>
+        <picture>
+          <source srcset="./images/fog/fog3.avif" type="image/avif" style="--strok:1;">
+          <source srcset="./images/fog/fog3.png.webp 1px" type="image/webp" style="--strok:1;"><img class="fog__img" src=".images/fog/fog3.png" alt="fog" style="--strok:8;">
+        </picture>
+      </div>
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__left">
+              <div class="logo"> <a class="logo__link" href="https://betandyou.com">
+                  <svg class="logo__svg">
+                    <use xlink:href="images/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="logo__slogan"> 
+                    <div class="logo__text">best bets for you</div>
+                  </div></a></div>
+            </div>
+            <div class="howreg">
+              <div class="howreg__content" data-modal="popup-steps"> 
+                <div class="howreg__icon">
+                  <svg class="howreg__svg"> 
+                    <use xlink:href="images/sprite.svg#icon-phone"></use>
+                  </svg>
+                </div>
+                <p class="howreg__text"><span>Как</span> зарегестрироваться?</p>
+              </div>
+            </div>
+            <div class="header__box">
+              <div class="langCheck">
+                <div class="langCheck__wrapper">
+                                <label class="langCheck__item langCheck__item- selected" for="">
+                                  <div class="icon icon-"></div><span class="langContext"></span>
+                                  <input type="checkbox" id="" name=""><span class="arrow"></span>
+                                </label>
+                                <label class="langCheck__item langCheck__item-en active" for="en">
+                                  <div class="icon icon-en"></div><span class="langContext">en</span>
+                                  <input type="checkbox" id="en" name="en">
+                                </label>
+                                <label class="langCheck__item langCheck__item-pt " for="pt">
+                                  <div class="icon icon-pt"></div><span class="langContext">pt</span>
+                                  <input type="checkbox" id="pt" name="pt">
+                                </label>
+                                <label class="langCheck__item langCheck__item-ru " for="ru">
+                                  <div class="icon icon-ru"></div><span class="langContext">ru</span>
+                                  <input type="checkbox" id="ru" name="ru">
+                                </label>
+                                <label class="langCheck__item langCheck__item-tr " for="tr">
+                                  <div class="icon icon-tr"></div><span class="langContext">tr</span>
+                                  <input type="checkbox" id="tr" name="tr">
+                                </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="top">
+          <div class="container">
+            <div class="top__inner">
+              <div class="title"> 
+                <h1 class="title__text">
+                  
+                  фантастический бонус<span class="title__num gradient">110&nbsp;eur</span>
+                </h1>
+              </div>
+              <div class="top__promo">
+                <div class="promo">
+                                  <div class="promo__item">
+                                    <div class="promo__picture"><img class="promo__image" src="images/slide/promo-image.png" alt="players"></div>
+                                    <div class="promo__border">
+                                      <div class="promo__layout"> </div>
+                                      <div class="promo__match">
+                                        <div class="promo__tournament">
+                                          <div class="promo__tournament-box"> <img class="promo__tournament-logo" src="images/slide/trsuper-lig.png" alt="tournament-logo"></div>
+                                        </div>
+                                        <div class="promo__content">
+                                          <div class="promo__team promo__team--left">
+                                            <div class="promo__pair">
+                                              <div class="promo__team-logo"><img src="images/slide/1-1.png" alt="logo"></div>
+                                              <div class="promo__name">istanbul beshiktash  </div>
+                                            </div>
+                                            <div class="promo__pair"> 
+                                              <div class="promo__team-logo"><img src="images/slide/2-1.png" alt="logo"></div>
+                                              <div class="promo__name">beshiktash tromd                  </div>
+                                            </div>
+                                            <div class="promo__pair"> 
+                                              <div class="promo__team-logo"><img src="images/slide/3-1.png" alt="logo"></div>
+                                              <div class="promo__name">beshiktash-sdfsdf                   </div>
+                                            </div>
+                                          </div>
+                                          <div class="promo__separator">
+                                            <div class="promo__event">
+                                              <p>Süper Lig<span class="gradient-text red-gradient">Поддержи свою команду</span></p>
+                                            </div>
+                                            <button class="ellipse-btn" data-modal="popup-form">поставить</button>
+                                          </div>
+                                          <div class="promo__team promo__team--right">
+                                            <div class="promo__pair">
+                                              <div class="promo__team-logo"><img src="images/slide/1-2.png" alt="logo"></div>
+                                              <div class="promo__name">beshiktash                 </div>
+                                            </div>
+                                            <div class="promo__pair">
+                                              <div class="promo__team-logo"><img src="images/slide/2-2.png" alt="logo"></div>
+                                              <div class="promo__name">beshiktash                 </div>
+                                            </div>
+                                            <div class="promo__pair">
+                                              <div class="promo__team-logo"><img src="images/slide/3-2.png" alt="logo"></div>
+                                              <div class="promo__name">beshiktash                 </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                </div>
+              </div>
+              <div class="top__geoContent">
+                <div class="title"> 
+                  <h1 class="title__text">
+                    
+                    фантастический бонус<span class="title__num gradient">110&nbsp;eur</span>
+                  </h1>
+                </div>
+                <div class="top__wrapper">
+                  <div class="form-tabs">
+                    <div class="form-tabs__switches">
+                      
+                      <a class="switch" id="switchGmail" href="javascript:void(0)"><span>Reg gmail</span></a>
+                      <a class="switch active" id="switchPhone" href="javascript:void(0)"><span>Reg phone</span></a>
+                      
+                    </div>
+                    <form id="tabsForm" action="/">
+                      <select class="form-element" id="country" name="country"></select>
+                      <select class="form-element" id="currency" name="currency">
+                        <option value="USD">usd</option>
+                        <option value="EUR">euro</option>
+                        <option value="UAH">грн</option>
+                      </select>
+                                      <div class="form-element phone-block switchPhone">
+                                        <input id="phone" type="tel" name="phone">
+                                        <div class="valid-block"><span class="hide" id="valid-msg">✓ Valid</span><span class="hide" id="error-msg"></span></div>
+                                      </div>
+                                      <input class="form-element switchGmail hide" id="email" type="email" name="email" placeholder="email">
+                      <button class="form-element sub-form" type="button" disabled="disabled">Зарегистрироваться</button>
+                      <div class="block-promo">
+                        <label for="">
+                          <input id="checkPromo" name="checkPromo" type="checkbox"><span>Have a promo code? </span>
+                        </label>
+                        <input class="promo-hide" id="promo" name="promo" placeholder="enter promo code" type="text">
+                      </div>
+                      <input id="currentCountry" type="hidden" name="country" value="">
+                      <input id="tagReg" type="hidden" name="tag" value="">
+                    </form>
+                  </div><a id="authLink" style="position:absolute; opacity: 0; z-index: -100; height: 0px; width: 0px;" href="#"></a>
+                </div><a class="thermslink" href="#">
+                  <svg width="24" height="19"><use xlink:href="images/sprite.svg#icon-haveaccaunt"></use></svg>
+                  уже есть аккаунт</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="instruction">
+          <div class="container">
+            <div class="instruction__inner">
+              <ul class="instruction__items"> 
+                <li class="instruction__number" id="instructionNumberOne">
+                  <div class="instruction__content">
+                    <p class="instruction__num" data-text="1">1</p>
+                    <div class="instruction__box">
+                      <div class="instruction__action gradient">REGISTRIEREN</div><span>SIE SICH AUF DER WEBSIT </span><span class="gradient">136 uah </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="instruction__number" id="instructionNumberTwo">
+                  <div class="instruction__content">
+                    <p class="instruction__num" data-text="2">2</p>
+                    <div class="instruction__box">              
+                      <p class="instruction__action gradient">EINE</p><span> EINZAHLUNG</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="instruction__number" id="instructionNumberThree">
+                  <div class="instruction__content">
+                    <p class="instruction__num" data-text="3">3</p>
+                    <div class="instruction__box">
+                      <p class="instruction__action gradient">VERDIENEN</p><span> UND GEWINNEN SIE MIT BETANDYOU</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer-wrap container">
+          <div class="payments-methods">
+            <div>
+              <svg width="35" height="27">
+                <use xlink:href="images/sprite.svg#masterCardWB"></use>
+              </svg>
+              <svg width="35" height="27">
+                <use xlink:href="images/sprite.svg#masterCardColor"></use>
+              </svg>
+            </div>
+            <div>
+              <svg width="54" height="27">
+                <use xlink:href="images/sprite.svg#visaWB"></use>
+              </svg>
+              <svg width="54" height="27">
+                <use xlink:href="images/sprite.svg#visaColor"></use>
+              </svg>
+            </div>
+            <div>
+              <svg width="74" height="26">
+                <use xlink:href="images/sprite.svg#SkrillWB"></use>
+              </svg>
+              <svg width="74" height="26">
+                <use xlink:href="images/sprite.svg#SkrillColor"></use>
+              </svg>
+            </div>
+            <div>
+              <svg width="29" height="34">
+                <use xlink:href="images/sprite.svg#bitcoinWB"></use>
+              </svg>
+              <svg width="29" height="34">
+                <use xlink:href="images/sprite.svg#bitcoinColor"></use>
+              </svg>
+            </div>
+            <div>
+              <svg width="120" height="20">
+                <use xlink:href="images/sprite.svg#neteller"></use>
+              </svg>
+              <svg width="120" height="20">
+                <use xlink:href="images/sprite.svg#netellerColor"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="app-links"><a href="#">
+              <svg class="app-links__svg" width="136" height="40">
+                <use xlink:href="images/sprite.svg#icon-android"> </use>
+              </svg></a><a href="#"> 
+              <svg class="app-links__svg" width="133" height="39">
+                <use xlink:href="images/sprite.svg#icon-iosapp"></use>
+              </svg></a></div>
+          <div class="soc-networks"><a href="#"> 
+              <svg class="soc-networks__svg" width="43" height="43">
+                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+              </svg></a><a href="#">
+              <svg class="soc-networks__svg" width="38" height="38">
+                <use xlink:href="images/sprite.svg#icon-insta"></use>
+              </svg></a><a href="#">
+              <svg class="soc-networks__svg" width="18" height="37">
+                <use xlink:href="images/sprite.svg#icon-fb"> </use>
+              </svg></a></div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup modal" id="popup-steps">
+      <div class="popup__block">
+        <div class="popup__close"><a class="popup__closeBtn"></a></div>
+        <div class="popup__wrapper"><a class="popup__close" href="#"> <span class="popup__close-btn"></span></a>
+          <div class="popup__content"> 
+            <ul class="popup__list">
+              <li class="popup__number">
+                <p class="popup__text">
+                  <span>Вручную</span> введите <span>код</span> вашей страны
+                  
+                </p>
+              </li>
+              <li class="popup__number">
+                <p class="popup__text">
+                  Перейдя в следующее поле, введите <span>номер</span> телефона
+                  
+                </p>
+              </li>
+              <li class="popup__number">
+                <p class="popup__text">
+                  Ваша страна <span>автоматически</span> будет привязана к аккаунту после регистрации.
+                  
+                </p>
+              </li>
+            </ul>
+            <div class="popup__button"><a class="popup__btn" href="https://betandyou.com/registration/">
+                регистрируйся
+                
+                
+                </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="setka"></div>
+    <script src="js/main.min.js" defer></script>
+    <script class="iti-load-utils" src="js/utils.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="js/main-form.js"></script>
+  </body>
+</html>

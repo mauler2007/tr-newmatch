@@ -1,0 +1,75 @@
+block promo
+
+mixin slide (bgrImg,tournamentLogo,leftName,rightName,time,date)
+    .promo__item
+        .promo__picture
+          img.promo__image(src=`images/slide/${bgrImg}` alt='players')
+        
+        .promo__border
+          .promo__layout 
+          .promo__match
+            .promo__tournament
+              .promo__tournament-box 
+                img.promo__tournament-logo(src=`images/slide/${tournamentLogo}` alt="tournament-logo")
+            .promo__content
+              .promo__team.promo__team--left
+                .promo__pair
+                  .promo__team-logo
+                    img(src=`images/slide/1-1.png`, alt="logo")
+                  .promo__name istanbul beshiktash  
+                .promo__pair 
+                  .promo__team-logo
+                    img(src=`images/slide/2-1.png`, alt="logo")
+                  .promo__name beshiktash tromd                  
+                .promo__pair 
+                  .promo__team-logo
+                    img(src=`images/slide/3-1.png`, alt="logo")
+                  .promo__name beshiktash-sdfsdf                   
+                //- .promo__left-image
+                //-   img.promo__left-img(src=`images/slide/${logoLeft}` alt="team-logo")
+                //- .promo__name 
+                //-   span!= `${leftName}` 
+                
+                //- .promo__kef-box
+                //-   .promo__kef.promo__kef--left 
+                //-     span 2.47
+              .promo__separator
+                .promo__event
+                  p Süper Lig
+                    span.gradient-text.red-gradient Поддержи свою команду
+                  //- time.promo__time(datetime="2022-01-18T09:54") 
+                  //-   span 17:00 
+                  //- time.promo__date(datetime="2022-01-18T09:54") 
+                  //-   span 17:00
+                include buttonEllipse   
+              .promo__team.promo__team--right
+                .promo__pair
+                  .promo__team-logo
+                    img(src=`images/slide/1-2.png`, alt="logo")
+                  .promo__name beshiktash                 
+                .promo__pair
+                  .promo__team-logo
+                    img(src=`images/slide/2-2.png`, alt="logo")
+                  .promo__name beshiktash                 
+                .promo__pair
+                  .promo__team-logo
+                    img(src=`images/slide/3-2.png`, alt="logo")
+                  .promo__name beshiktash                 
+
+
+                //- .promo__right-image
+                //-   img.promo__right-img(src=`images/slide/${logoRight}`)
+                //- .promo__name 
+                //-   span!= `${rightName}`
+                
+                //- .promo__kef-box
+                //-   .promo__kef.promo__kef--right
+                //-     span 3.123 
+            //- include buttonEllipse  
+.promo
+  +slide('promo-image.png','trsuper-lig.png','milan','napoli','19:10','21.04')
+  //- +slide('promo-image2.png','tournament-logo.png','logo-left.png','logo-right.png','milan milan','napoli napoli','19:10','21.04')
+  //- +slide('promo-image3.png','UEFA_Champions_League_logo-01.svg','logo-left.png','logo-right.png','milan milan milan','napolinapoli','19:10','21.04')
+       
+            
+

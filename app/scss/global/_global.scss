@@ -1,0 +1,178 @@
+html {
+  box-sizing: border-box;
+  background-blend-mode: overlay;
+  background-color: #181818;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+html {
+  @media (min-device-width: 1200px) and (min-device-height: 970px) {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+
+  // @include mq(lg) {
+  //   min-height: 100vh;
+  //   height: 100%
+  // }
+}
+
+body {
+  position: relative;
+  font-family: 'Mont', sans-serif;
+  line-height: 1;
+  color: $white;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: -webkit-image-set(url(../images/bg/bg.avif) 1x, url(../images/bg/bg.webp) 2x, url(../images/bg/bg.jpg) 2x);
+  background: -webkit-image-set("../images/bg/bg.avif"1x type("image/avif"), "../images/bg/bg.webp"2x type("image/webp"), "../images/bg/bg.jpg"2x type("image/jpg"));
+  background: -webkit-image-set(url(../images/bg/bg.avif) 1x type("image/avif"), url(../images/bg/bg.webp) 2x type("image/webp"), url(../images/bg/bg.jpg) 2x type("image/jpg"));
+  background: -webkit-image-set(url("../images/bg/bg.avif") 1x type("image/avif"), url("../images/bg/bg.webp") 2x type("image/webp"), url("../images/bg/bg.jpg") 2x type("image/jpg"));
+  background: image-set("../images/bg/bg.avif"1x type("image/avif"), "../images/bg/bg.webp"2x type("image/webp"), "../images/bg/bg.jpg"2x type("image/jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  }
+
+  &.body--safari {
+    background: url('../images/bg/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.setka {
+  position: absolute;
+  z-index: 1;
+  // z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 15%;
+
+  opacity: .4;
+  filter: grayscale(1);
+  background-position: 0% 100%;
+  background-size: 80%;
+  background: -webkit-image-set(url(../images/bg/setka.avif) 1x, url(../images/bg/setka.webp) 2x, url(../images/bg/setka.png) 2x);
+  background: -webkit-image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+  background: -webkit-image-set(url(../images/bg/setka.avif) 1x type("image/avif"), url(../images/bg/setka.webp) 2x type("image/webp"), url(../images/bg/setka.png) 2x type("image/png"));
+  background: image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+  // background: url('../images/bg/setka.png');
+
+  background-repeat: no-repeat;
+
+  &.setka--safari {
+    background: url('../images/bg/setka.png');
+    background-repeat: no-repeat;
+  }
+
+  @include mq(xs) {
+    height: 20%;
+    background-size: contain;
+  }
+
+  @include mq(lg) {
+    height: 30%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  overflow: hidden;
+  // @include mq(lg) {
+  //   height: 100%;
+  // }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1 0 auto;
+
+  @include mq(lg) {
+    background: -webkit-image-set(url(../images/bg/setka.avif) 1x, url(../images/bg/setka.webp) 2x, url(../images/bg/setka.png) 2x);
+    background: -webkit-image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+    background: -webkit-image-set(url(../images/bg/setka.avif) 1x type("image/avif"), url(../images/bg/setka.webp) 2x type("image/webp"), url(../images/bg/setka.png) 2x type("image/png"));
+    background: image-set("../images/bg/setka.avif"1x type("image/avif"), "../images/bg/setka.webp"2x type("image/webp"), "../images/bg/setka.png"2x type("image/png"));
+    // background: url('../images/bg/setka.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 15%;
+  }
+
+  &--safari {
+
+    @include mq(lg) {
+      background: url('../images/bg/setka.png');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 15%;
+    }
+  }
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
+.gradient {
+  background: -o-linear-gradient(180deg, #fff900 -73.86%, #ffd400 38.81%);
+  background: linear-gradient(180deg, #fff900 -73.86%, #ffd400 38.81%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mq(lg) {
+    line-height: 1;
+  }
+}
+
+.red-gradient {
+  background: -o-linear-gradient(180deg, #F95A71 -73.86%, #F40F3E 38.81%);
+  background: linear-gradient(180deg, #F95A71 -73.86%, #F40F3E 38.81%);
+}
+
+.gradient-text {
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

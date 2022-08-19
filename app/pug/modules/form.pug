@@ -1,0 +1,87 @@
+block form 
+
+//-  ТАБ №1
+mixin tabGmail (active)
+  if(active)
+    a#switchGmail.switch.active(href="javascript:void(0)")
+      span.
+        Reg gmail
+  else
+    a#switchGmail.switch(href="javascript:void(0)")
+      span.
+        Reg gmail
+//-  ТАБ №2
+mixin tabPhone (active)
+  if(active)
+    a#switchPhone.switch.active(href="javascript:void(0)")
+      span.
+        Reg phone
+  else
+    a#switchPhone.switch(href="javascript:void(0)")
+      span.
+        Reg phone
+
+mixin formPhone (active)
+  if(active)
+    .form-element.phone-block.switchPhone
+      input#phone(type='tel' name='phone' )
+      .valid-block
+        span#valid-msg.hide.
+          ✓ Valid
+        span#error-msg.hide.
+  else
+    .form-element.phone-block.switchPhone.hide
+
+mixin formGmail (active)
+  if(active)
+    input#email.form-element.switchGmail(type='email' name='email' placeholder='email')
+  else
+    input#email.form-element.switchGmail.hide(type='email' name='email' placeholder='email')
+
+
+.top__wrapper
+  .form-tabs
+    .form-tabs__switches
+      |
+      |
+      +tabGmail(false)
+      |
+      |
+      +tabPhone(true)
+      |
+      |
+    form#tabsForm(action='/')
+      select#country.form-element(name='country')
+      select#currency.form-element(name='currency')
+        option(value='USD').
+          usd
+        option(value='EUR').
+          euro
+        option(value='UAH').
+          грн
+      +formPhone(true)
+       
+            
+      +formGmail(false)
+      button.form-element.sub-form(type='button' disabled="disabled").
+        Зарегистрироваться
+      .block-promo
+        label(for='')
+          input#checkPromo(name='checkPromo' type='checkbox')
+          span.
+            Have a promo code? 
+        input#promo( class="promo-hide" name='promo' placeholder='enter promo code' type='text')
+      input#currentCountry(type='hidden' name='country' value='') 
+      //- input#currentCountry(type='hidden' name='country' value='<?= $region;?>') 
+                              
+      input#tagReg(type='hidden' name='tag' value="")
+      
+                              
+
+  //- p.agreement Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с условиями бонусной акции и правилами букмекерской конторы.
+      
+      
+    
+  a#authLink(style='position:absolute; opacity: 0; z-index: -100; height: 0px; width: 0px;' href='#')
+  //- a#authLink(style='position:absolute; opacity: 0; z-index: -100; height: 0px; width: 0px;' href='<?= $cleanURL ?>')
+  
